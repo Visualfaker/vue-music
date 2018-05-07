@@ -77,10 +77,23 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
-      {
+	  {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+        ]
+      },
+	  /*//vue-cli中自带  只需要安装依赖不需要配置就可以使用 {
         test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      }
+        use: [
+			{loader:"style-loader"},
+			{loader:"css-loader"},
+			{loader:"stylus-loader"}
+		],
+		//loader: 'style-loader!css-loader!stylus-loader',
+		include: ['node build/dev-server.js']
+      }*/
     ]
   },
   node: {
