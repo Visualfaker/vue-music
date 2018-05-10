@@ -38,6 +38,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'common': resolve('src/common'),
+      'components': resolve('src/components')
     }
   },
   module: {
@@ -84,15 +85,16 @@ module.exports = {
           { loader: "css-loader" }
         ]
       },
-	  /*//vue-cli中自带  只需要安装依赖不需要配置就可以使用 {
+	  //vue-cli中自带  只需要安装依赖不需要配置就可以使用
+     /* {
         test: /\.styl$/,
         use: [
-			{loader:"style-loader"},
-			{loader:"css-loader"},
-			{loader:"stylus-loader"}
-		],
-		//loader: 'style-loader!css-loader!stylus-loader',
-		include: ['node build/dev-server.js']
+          {loader:"style-loader"},
+          {loader:"css-loader"},
+          {loader:"stylus-loader"}
+        ],
+      //loader: 'style-loader!css-loader!stylus-loader',
+      include: ['node build/dev-server.js']
       }*/
     ]
   },
